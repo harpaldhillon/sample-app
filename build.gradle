@@ -49,5 +49,4 @@ def propertiesArtifact = file('app.properties')
 
 artifacts {
         archives propertiesArtifact
-	archives db
 }
