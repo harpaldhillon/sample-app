@@ -7,7 +7,6 @@ version = buildId
 
 println buildId
 
-
 buildscript {
   repositories {
     maven {
