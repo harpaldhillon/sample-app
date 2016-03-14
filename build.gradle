@@ -3,7 +3,7 @@ apply plugin: 'maven'
 
 group = groupId
 archivesBaseName = 'sample-app'
-version = versionId+buildId
+version = buildId
 
 println buildId
 
