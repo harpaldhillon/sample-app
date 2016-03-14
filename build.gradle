@@ -40,3 +40,14 @@ repositories
 {
 	mavenCentral()
 }
+
+task db(type: Zip) {
+    from './db'
+}
+
+def propertiesArtifact = file('app.properties')
+
+artifacts {
+        archives propertiesArtifact
+	archives db
+}
