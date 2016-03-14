@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = groupId
+archivesBaseName = 'sample-app'
+version = versionId
+
+
+uploadArchives
+{
+   repositories
+   {
+	mavenDeployer
+	{
+	repository( url: "http://localhost:8081/nexus/content/repositories/snapshots/")
+        {
+		authentication (userName: "deployment", password: "deployment123")
+	}
+
+	snapshotRepository( url: "http://localhost:8081/nexus/content/repositories/snapshots/")
+	{
+		authentication (userName: "deployment", password: "deployment123")
+	}
+	}
+    }
+}
+//	repositories
+//	{
+//		flatDir { dirs "../repo" }
+//	}	
+//}
+
+dependencies
+{
+	compile 'ch.qos.logback:logback-classic:1.1.2'
+}
+repositories
+{
+	mavenCentral()
+}
