@@ -82,3 +82,5 @@ release {
         pushToBranchPrefix = ''
     }
 }
+
+afterReleaseBuild.dependOn uploadArchives
