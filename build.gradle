@@ -83,4 +83,4 @@ release {
     }
 }
 
-afterReleaseBuild.dependOn uploadArchives
+afterReleaseTag.dependsOn uploadArchives
